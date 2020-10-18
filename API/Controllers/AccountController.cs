@@ -67,7 +67,7 @@ namespace API.Controllers
 
             for (int i = 0; i < computedHash.Length; i++)
             {
-                if (computedHash[i] != user.PasswordSalt[i])
+                if (computedHash[i] != user.PasswordHash[i])
                 {
                     return Unauthorized("Incorrect password");
                 }
